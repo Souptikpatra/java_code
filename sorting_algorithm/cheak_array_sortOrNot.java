@@ -1,6 +1,6 @@
-package Array;
+package sorting_algorithm;
 import java.util.Scanner;
-public class array_takingInput_output {
+public class cheak_array_sortOrNot {
     public static void print_array(int [] temp){
         System.out.print("[ ");
         for (int i = 0; i < temp.length; i++) {
@@ -20,6 +20,23 @@ public class array_takingInput_output {
         return inptemp;
     }
     public static void main(String[] args) {
-       print_array(input_array());
+        int [] arr = input_array();
+        print_array(arr);
+        // logic
+        int n = arr.length;
+        boolean flag = true; // true means array sorted
+        for (int i = 0; i < n-1; i++) { // we don't need to go for last element
+            if (arr[i]>arr[i+1]) {
+                flag = false;
+                break;
+            }
+        }
+        if (flag == false){
+            System.out.println("array is not sorted");
+        }
+        else {
+            System.out.println("array is sorted");
+        }
+
     }
 }
