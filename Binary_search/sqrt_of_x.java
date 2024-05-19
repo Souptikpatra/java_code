@@ -1,4 +1,5 @@
-public class test_code {
+package Binary_search;
+public class sqrt_of_x {
     public static int sqrt(int x){
         // no need to make an array,
         int low = 0; int high = x;
@@ -14,9 +15,9 @@ public class test_code {
             else if (mid < x/mid) low = mid + 1;
         }
         return high; // when loop exits by its condition ( low <= high )
-                          // after that 'high' is definitely pointing to sqrt(x)
+        // after that 'high' is definitely pointing to sqrt(x)
     }
     public static void main(String[] args) {
-        System.out.println(sqrt(8));
+        System.out.println(sqrt(25));
     }
 }
