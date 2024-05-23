@@ -1,10 +1,8 @@
 package recurrsion;
-
 import java.util.Scanner;
-
 public class sum1ToN {
     public static int print_sum(int n){
-        if(n == 1) return 1;
+        if(n == 0 || n == 1) return n;
         else return n + print_sum(n-1);
     }
     public static void main(String[] args) {
